@@ -276,12 +276,12 @@ const followRules = (arr, warning = true) => {
 	//must be octolinear
 	if (!isVertical(arr) && !isHorizontal(arr) && !isDiagonal(arr)) {
 		bool = false;
-		warning && forbidMove("Line must be horizontal, vertical, or diagonal");
+		warning && forbidMove("Line must be horizontal, vertical, or diagonal!");
 	}
 	//mustn't intersect lines
 	if (lineCross(arr)) {
 		bool = false;
-		warning && forbidMove("You mustn't cross any lines");
+		warning && forbidMove("You mustn't cross any lines!");
 	}
 	//mustn't touch node already visited
 	path.forEach((node) => {
